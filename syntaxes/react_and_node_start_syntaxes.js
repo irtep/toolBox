@@ -24,14 +24,17 @@ Update tsconfig.json with these key settings:
 {
   "compilerOptions": {
     "target": "ES2020",
-    "module": "commonjs",
+    "module": "CommonJS",
     "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true
-    //"verbatimModuleSyntax": true, <==== comment this off
-  }
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src/starstar/star"],
+  "exclude": ["node_modules", "dist"]
 }
 
 mkdir src
@@ -59,6 +62,8 @@ add to package.json:
   "start": "node dist/index.js"
 }
 
+npm i --save-dev @types/cors
+npm i --save-dev @types/jsonwebtoken
 
 
 */
