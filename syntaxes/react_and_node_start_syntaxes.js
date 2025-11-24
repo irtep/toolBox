@@ -20,6 +20,7 @@ npm install express
 npm install -D typescript @types/node @types/express ts-node nodemon
 npx tsc --init
 
+Update tsconfig.json with these key settings:
 {
   "compilerOptions": {
     "target": "ES2020",
@@ -29,9 +30,11 @@ npx tsc --init
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true
+    //"verbatimModuleSyntax": true, <==== comment this off
   }
 }
 
+mkdir src
 src/index.ts
 
 import express, { Request, Response } from 'express';
